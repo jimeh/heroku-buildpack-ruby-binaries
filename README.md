@@ -1,4 +1,4 @@
-# Custom Ruby binaries for heroku-buildpack-ruby
+# Custom/Cached binaries for heroku-buildpack-ruby
 
 This repository contains custom binary packages for Ruby as a temporary solution
 to work around current issues with pkgr and heroku-buildpack-ruby.
