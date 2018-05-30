@@ -1,6 +1,7 @@
-# libyaml-0.1.7.tgz
+# LibYAML 0.1.7
 
-- Built from source: http://pyyaml.org/download/libyaml/yaml-0.1.7.tar.gz
-- Build environment: `ubuntu/precise64` [v20170427.0.0][] vagrant box
+Downloaded from buildcurl.com on 2018-05-30 with:
 
-[v20170427.0.0]: https://app.vagrantup.com/ubuntu/boxes/precise64/versions/20170427.0.0
+```
+curl -L --get --fail --retry 3 buildcurl.com -d recipe=libyaml -d version=0.1.7 -d target=ubuntu:12.04 -o "ubuntu-12.04/libyaml-0.1.7.tgz"
+```

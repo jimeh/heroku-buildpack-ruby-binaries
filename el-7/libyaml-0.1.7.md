@@ -1,6 +1,7 @@
-# libyaml-0.1.7.tgz
+# LibYAML 0.1.7
 
-- Built from source: http://pyyaml.org/download/libyaml/yaml-0.1.7.tar.gz
-- Build environment: `centos/7` [v1803.01][] vagrant box
+Downloaded from buildcurl.com on 2018-05-30 with:
 
-[v1803.01]: https://app.vagrantup.com/centos/boxes/7/versions/1803.01
+```
+curl -L --get --fail --retry 3 buildcurl.com -d recipe=libyaml -d version=0.1.7 -d target=el:7 -o "el-7/libyaml-0.1.7.tgz"
+```
