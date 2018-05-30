@@ -20,7 +20,7 @@ $(4)/$(2)-%.md:
 	&& echo "Downloaded from buildcurl.com on $$(shell date +%Y-%m-%d) with:" >> "$$@" \
 	&& echo '' >> "$$@" \
 	&& echo '```' >> "$$@" \
-	&& echo "curl -L --get --fail --retry 3 buildcurl.com -d recipe=$(3) -d version=$$* -d target=$(5) -o \"$(4)/$(2)-$$*.tgz\"" >> "$$@" \
+	&& echo "curl -L --get --fail --retry 3 buildcurl.com -d recipe=$(3) -d version=$$* -d target=$(5) -o \"$(2)-$$*.tgz\"" >> "$$@" \
 	&& echo '```' >> "$$@"
 endef
 

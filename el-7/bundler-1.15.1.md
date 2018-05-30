@@ -1,4 +1,4 @@
-# Bundler 1.15.1
+# Ruby Bundler 1.15.1
 
 Downloaded from buildcurl.com on 2018-05-30 with:
 
