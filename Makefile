@@ -8,11 +8,11 @@ $(4)/$(2)-%.tgz:
 	curl -L --get --fail --retry 3 buildcurl.com \
 		-d recipe=$(3) -d version="$$*" -d target=$(5) -o "$$@"
 
-$(4)/$(2)-%.md5:
+$(4)/$(2)-%.tgz.md5:
 	md5 -q "$(4)/$(2)-$$*.tgz" > "$$@"
 
-$(4)/$(2)-%.md5.gpg:
-	gpg --sign "$(4)/$(2)-$$*.md5"
+$(4)/$(2)-%.tgz.md5.gpg:
+	gpg --sign "$(4)/$(2)-$$*.tgz.md5"
 
 $(4)/$(2)-%.md:
 	echo "# $(1) $$*" > "$$@" \
@@ -32,12 +32,12 @@ $$(eval $$(call buildcurl,$(1),$(2),$(3),ubuntu-12.04,ubuntu:12.04))
 .PHONY: $(2)-%
 $(2)-%:
 	make "el-7/$(2)-$$*.tgz" \
-	&& make "el-7/$(2)-$$*.md5" \
-	&& make "el-7/$(2)-$$*.md5.gpg" \
+	&& make "el-7/$(2)-$$*.tgz.md5" \
+	&& make "el-7/$(2)-$$*.tgz.md5.gpg" \
 	&& make "el-7/$(2)-$$*.md"
 	make "ubuntu-12.04/$(2)-$$*.tgz" \
-	&& make "ubuntu-12.04/$(2)-$$*.md5" \
-	&& make "ubuntu-12.04/$(2)-$$*.md5.gpg" \
+	&& make "ubuntu-12.04/$(2)-$$*.tgz.md5" \
+	&& make "ubuntu-12.04/$(2)-$$*.tgz.md5.gpg" \
 	&& make "ubuntu-12.04/$(2)-$$*.md"
 endef
 
