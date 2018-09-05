@@ -46,6 +46,5 @@ endef
 #
 
 $(eval $(call fetch,LibYAML,libyaml,libyaml))
-$(eval $(call fetch,Node,node,node))
 $(eval $(call fetch,Ruby Bundler,bundler,rubygem-bundler))
 $(eval $(call fetch,Ruby,ruby,ruby))
