@@ -9,7 +9,7 @@ $(4)/$(2)-%.tgz:
 		-d recipe=$(3) -d version="$$*" -d target=$(5) -o "$$@"
 
 $(4)/$(2)-%.tgz.sha512:
-	shasum -p -a 512 "$(4)/$(2)-$$*.tgz" > "$$@"
+	shasum -b -a 512 "$(4)/$(2)-$$*.tgz" > "$$@"
 
 $(4)/$(2)-%.tgz.sha512.gpg:
 	gpg --sign "$(4)/$(2)-$$*.tgz.sha512"
